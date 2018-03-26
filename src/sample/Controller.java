@@ -58,7 +58,7 @@ public class Controller{
     // Cette méthode me permet quand à elle de venir affecter les boules en
     // fontion de la matrice de jeu.
     //--------------------------------------------------------------------------
-    private void affectBalls (){
+    private void affectDiams (){
         for (int i=0; i<8; i++){
             for (int j=0; j<8; j++){
                 int id = EZJeu.getXY(i, j);
@@ -83,7 +83,7 @@ public class Controller{
         loadImageOver();
         loadImageSelected();
         EZJeu = new ElementZ_Model();
-        affectBalls();
+        affectDiams();
         scoreGame.setText(String.valueOf(EZJeu.getScore()));
     }
 
@@ -107,7 +107,7 @@ public class Controller{
                 EZJeu.play(selectedY, selectedX, rowIndex.intValue(), colIndex.intValue());
                 selectedX = -1;
                 selectedY = -1;
-                affectBalls();
+                affectDiams();
                 scoreGame.setText(String.valueOf(EZJeu.getScore()));
             }
 
